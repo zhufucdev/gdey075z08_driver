@@ -55,7 +55,7 @@ If you break your display when using this library,
 please raise an issue so that I won't break my own
 
 ## License
-`
+```
 MIT License
 
 Copyright (c) 2023 zhufucdev
@@ -77,4 +77,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-`
+```
