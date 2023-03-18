@@ -12,7 +12,7 @@ the project
 Here's an example
 
 ```python
-import gdey075z08_driver as driver
+from gdey075z08_driver import driver
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
@@ -23,7 +23,6 @@ EPD_HEIGHT = 480
 
 
 def main(epd):
-
     # For simplicity, the arguments are explicit numerical coordinates
     image = Image.new('L', (EPD_WIDTH, EPD_HEIGHT), 255)    # 255: clear the frame
     draw = ImageDraw.Draw(image)

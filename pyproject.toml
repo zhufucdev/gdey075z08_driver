@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "gdey075z08_driver"
-version = "0.0.1"
+version = "0.0.4"
 authors = [
 	{ name="zhufucdev", email="1095291434@qq.com" }
 ]
@@ -15,6 +15,11 @@ classifiers = [
 	"Programming Language :: Python :: 3",
 	"License :: OSI Approved :: MIT License",
 	"Operating System :: POSIX :: Linux",
+]
+dependencies = [
+	"RPi.GPIO>=0.7.1",
+	"pillow>=9.4.0",
+	"spidev>=3.6"
 ]
 
 [project.urls]
