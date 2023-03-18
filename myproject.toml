@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gdey075z08_driver"
+version = "0.0.1"
+authors = [
+	{ name="zhufucdev", email="1095291434@qq.com" }
+]
+description = "Driver library to GDEY075Z08 e-paper display"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+	"Programming Language :: Python :: 3",
+	"License :: OSI Approved :: MIT License",
+	"Operating System :: Raspberry Pi OS",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/zhufucdev/gdey075z08_driver"
+"Bug Tracker" = "https://github.com/zhufucdev/gdey075z08_driver/issues"
