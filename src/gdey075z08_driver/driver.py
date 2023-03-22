@@ -24,6 +24,7 @@
 # THE SOFTWARE.
 #
 import logging
+from typing import Tuple
 
 import RPi.GPIO as GPIO
 
@@ -74,12 +75,19 @@ VCM_DC_SETTING = 0x82
 
 
 class EPD:
-    def __init__(self):
+    def __init__(self, red_bounds: Tuple[int, int] = (64, 192)):
+        """
+        Constructs an EPD controller
+        :param red_bounds: the (max, min) threshold for red pixels.
+        Specifically, if a pixel's grayscale value is no smaller and no
+        larger than the bounds, it will be considered red.
+        """
         self.reset_pin = epdif.RST_PIN
         self.dc_pin = epdif.DC_PIN
         self.busy_pin = epdif.BUSY_PIN
         self.width = EPD_WIDTH
         self.height = EPD_HEIGHT
+        self.red_bounds = red_bounds
 
     def digital_write(self, pin, value):
         epdif.epd_digital_write(pin, value)
@@ -162,9 +170,9 @@ class EPD:
                 sign_r = 0x00
                 for i in range(0, 8):
                     p = pixels[x * 8 + i, y]
-                    if p < 64:
+                    if p < self.red_bounds[0]:
                         sign_w &= ~(0x80 >> i)
-                    elif p < 192:
+                    elif p < self.red_bounds[1]:
                         sign_r |= 0x80 >> i
                 index = x + int(y * self.width / 8)
                 buf_w[index] = sign_w
