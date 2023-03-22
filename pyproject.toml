@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "gdey075z08_driver"
-version = "0.0.4"
+version = "0.0.5"
 authors = [
 	{ name="zhufucdev", email="1095291434@qq.com" }
 ]
